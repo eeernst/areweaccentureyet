@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Are We Accenture Yet?</title>
+		<style>
+			:root{--bg:#0f1724;--card:#0b1220;--text:#e6eef8}
+			html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+			body{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#071126 0%, #00121a 100%);color:var(--text)}
+			.card{background:rgba(255,255,255,0.03);padding:28px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6);max-width:680px;width:100%;text-align:center}
+			h1{margin:0 0 12px;font-size:20px}
+			p.lead{margin:0 0 18px;color:#bcd3ee}
+
+			/* SVG gauge */
+			.gauge-wrap{display:flex;align-items:center;justify-content:center;margin:8px 0 18px}
+			svg{width:320px;height:200px;display:block}
+
+			/* needle styles: enable CSS transform animation on the <g> */
+			.needle{transform-box:fill-box; transform-origin:150px 150px; transition: transform 600ms cubic-bezier(.2,.9,.23,1)}
+
+			.controls{display:flex;gap:10px;justify-content:center;margin-top:8px}
+			.btn{background:#0b1726;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer}
+			.btn:active{transform:translateY(1px)}
+
+			.legend{display:flex;justify-content:center;gap:18px;margin-top:12px}
+			.legend-item{display:flex;align-items:center;gap:8px;color:#cfe3ff}
+			.swatch{width:14px;height:14px;border-radius:3px}
+
+			/* small responsive tweak */
+			@media (max-width:420px){svg{width:90%}}     
+		</style>
+	</head>
+	<body>
+		<div class="card">
+			<h1>Are We Accenture Yet?</h1>
+			<p class="lead"></p>
+
+					<div class="gauge-wrap">
+						<!-- Use the provided image directly. Place the attached image file at docs/gauge.png -->
+						<img src="gauge.png" alt="Gauge" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 6px 20px rgba(2,6,23,0.5)">
+					</div>
+
+					<div class="legend" style="margin-top:14px">
+						<div class="legend-item">Maybe</div>
+					</div>
+		</div>
+
+			<!-- The gauge is now the provided image. Place the attached image file at docs/gauge.png
+					 For example, save the attachment as: c:\...\areweaccentureyet\areweaccentureyet\docs\gauge.png -->
+	</body>
+</html>
